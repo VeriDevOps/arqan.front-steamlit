@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "arqan"
+version = "0.1.0"
+description = ""
+authors = ["Andrey Sadovykh <sadovykh@gmail.com>"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.37.1"
+httpx = "^0.27.0"
+attrs = "^24.1.0"
+python-dateutil = "^2.9.0.post0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+openapi-python-client = "^0.21.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
