@@ -65,19 +65,19 @@ if not st.session_state.get("stig_platform"):
 st.session_state.stig_platform = st.text_input(
     "Enter a STIG platform:",
     st.session_state.stig_platform,
-    help="windows_10 or ubuntu",
+    help="windows_10 or ubuntu or others",
 )
 
 if not st.session_state.get("search_limit"):
     st.session_state.search_limit = 10
-st.session_state.search_limit = st.slider(
-    "Search limit:",
-    value=st.session_state.search_limit,
-    step=1,
-    min_value=1,
-    max_value=10,
-    help="10",
-)
+# st.session_state.search_limit = st.slider(
+#     "Search limit:",
+#     value=st.session_state.search_limit,
+#     step=1,
+#     min_value=1,
+#     max_value=10,
+#     help="10",
+# )
 
 # print("TEST TEST TEST ")
 # print("st.session_state.search_limit")

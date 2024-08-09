@@ -49,4 +49,5 @@ def loginbar():
         st.sidebar.success(f"{st.session_state.user} is logged in")
         _but = st.sidebar.button("Renew token")
         if _but:
+            st.session_state.token = ""
             stlogin()
