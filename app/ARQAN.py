@@ -35,7 +35,7 @@ with col2:
     Upload a PDF file, and this tool will analyze it to extract security-related requirements.
     It is designed to identify and present specific security needs found within the document.
     """)
-    st.page_link("pages/2_RSecReq_Extraction.py", label="SecReq Extraction", icon="📤")
+    st.page_link("pages/2_SecReq_Extraction.py", label="SecReq Extraction", icon="📤")
 
 # Optionally, add a footer or additional information
 st.markdown("---")
