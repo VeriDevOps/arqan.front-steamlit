@@ -1,33 +1,29 @@
 """Contains all the data models used in inputs/outputs"""
 
-from .body_post_sec_req_extract_from_pdf_api_tasks_sec_req_extract_from_pdf_post import (
-    BodyPostSecReqExtractFromPdfApiTasksSecReqExtractFromPdfPost,
-)
-from .body_post_sec_req_search_in_pdf_api_tasks_sec_req_search_in_pdf_post import (
-    BodyPostSecReqSearchInPdfApiTasksSecReqSearchInPdfPost,
-)
-from .body_sign_in_api_auth_sign_in_post import BodySignInApiAuthSignInPost
-from .body_sign_up_api_auth_sign_up_post import BodySignUpApiAuthSignUpPost
+from .body_extract_from_pdf import BodyExtractFromPdf
+from .body_search_in_pdf import BodySearchInPdf
+from .body_sign_in import BodySignIn
+from .body_sign_up import BodySignUp
 from .http_validation_error import HTTPValidationError
-from .sec_req_extract_from_pdf_request import SecReqExtractFromPDFRequest
-from .sec_req_extract_from_text_request import SecReqExtractFromTextRequest
-from .sec_req_search_db_request import SecReqSearchDBRequest
-from .sec_req_search_in_pdf_request import SecReqSearchInPDFRequest
-from .sec_req_search_in_text_request import SecReqSearchInTextRequest
+from .request_extract_from_pdf import ExtractFromPDFRequest
+from .request_extract_from_text import ExtractFromTextRequest
+from .request_search_db import SearchDBRequest
+from .request_search_in_pdf import SearchInPDFRequest
+from .request_search_in_text import SearchInTextRequest
 from .token import Token
 from .validation_error import ValidationError
 
 __all__ = (
-    "BodyPostSecReqExtractFromPdfApiTasksSecReqExtractFromPdfPost",
-    "BodyPostSecReqSearchInPdfApiTasksSecReqSearchInPdfPost",
-    "BodySignInApiAuthSignInPost",
-    "BodySignUpApiAuthSignUpPost",
+    "BodyExtractFromPdf",
+    "BodySearchInPdf",
+    "BodySignIn",
+    "BodySignUp",
     "HTTPValidationError",
-    "SecReqExtractFromPDFRequest",
-    "SecReqExtractFromTextRequest",
-    "SecReqSearchDBRequest",
-    "SecReqSearchInPDFRequest",
-    "SecReqSearchInTextRequest",
+    "ExtractFromPDFRequest",
+    "ExtractFromTextRequest",
+    "SearchDBRequest",
+    "SearchInPDFRequest",
+    "SearchInTextRequest",
     "Token",
     "ValidationError",
 )
