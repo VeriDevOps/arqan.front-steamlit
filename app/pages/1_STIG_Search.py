@@ -11,9 +11,9 @@ from client.api.common.get_task import sync_detailed as tasksync_detailed
 from client.api.stig_search import search_db
 from client.models.request_search_db import SearchDBRequest
 
-st.set_page_config(page_title="ARQAN. STIG Search", page_icon="📈")
+st.set_page_config(page_title="ARQAN. STIG Search", page_icon="🔒")
 
-st.title("ARQAN. Recommend relevant STIGs for a requirement 📈")
+st.title("ARQAN. Recommend relevant STIGs for a requirement 🔍📄🔒")
 
 stutils.loginbar()
 

@@ -42,6 +42,9 @@ def stlogin():
 
 
 def loginbar():
+    if not st.session_state.get("token"):
+        st.session_state.token = ""
+
     if (st.session_state.token == ""):
         st.sidebar.error("Please login")
         stlogin()

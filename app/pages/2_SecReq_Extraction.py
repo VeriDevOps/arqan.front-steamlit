@@ -16,9 +16,9 @@ from client.api.extract_sec_req import extract_from_pdf
 from client.models.body_extract_from_pdf import BodyExtractFromPdf as Body
 from client.models.request_extract_from_pdf import ExtractFromPDFRequest
 
-st.set_page_config(page_title="ARQAN. Security Requirements Extraction", page_icon="📈")
+st.set_page_config(page_title="ARQAN. Security Requirements Extraction", page_icon="📤")
 
-st.title("ARQAN. Security Requirements Extraction 📈")
+st.title("ARQAN. Security Requirements Extraction 📤")
 
 stutils.loginbar()
 
