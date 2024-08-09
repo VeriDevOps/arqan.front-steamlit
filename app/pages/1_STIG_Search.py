@@ -13,9 +13,17 @@ from client.models.request_search_db import SearchDBRequest
 
 st.set_page_config(page_title="ARQAN. STIG Search", page_icon="🔒")
 
-st.title("ARQAN. Recommend relevant STIGs for a requirement 🔍📄🔒")
+st.title("ARQAN. Search for relevant STIGs for a requirement 🔍📄🔒")
 
 stutils.loginbar()
+
+st.write(
+    """
+    For a given textual security requirement and a specific platform (e.g., Windows 10),
+    this tool searches relevant Security Technology Implementation Guidelines (STIG).
+    It provides a recipe for detailed security requirements or even a fix.
+    """
+)
 
 
 # Function to wait for task completion

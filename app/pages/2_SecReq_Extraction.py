@@ -18,9 +18,16 @@ from client.models.request_extract_from_pdf import ExtractFromPDFRequest
 
 st.set_page_config(page_title="ARQAN. Security Requirements Extraction", page_icon="📤")
 
-st.title("ARQAN. Security Requirements Extraction 📤")
+st.title("ARQAN. Extract security requirements from a PDF 📤")
 
 stutils.loginbar()
+
+st.write(
+    """
+    Upload a PDF file, and this tool will analyze it to extract security-related requirements.
+    It is designed to identify and present specific security needs found within the document.
+    """
+)
 
 
 # Function to wait for task completion
@@ -108,5 +115,5 @@ if _but:
                     r2 = wait_for_task_completion(acl, task_id, 0.1)
 
                     st.write("### Extracted requirements:")
-                    st.markdown("\n".join([f"1. {req}" for req in r2['requirements']]))
+                    st.markdown("\n".join([f"1. {req}" for req in r2["requirements"]]))
                     print(r2)
