@@ -43,4 +43,6 @@ with col2:
 
 # Optionally, add a footer or additional information
 st.markdown("---")
-st.write("Login. Select one of the tools above to start experimenting.")
+st.write("## Login. Select one of the tools above to start experimenting.")
+st.divider()
+st.write("See sources at [GitHub](https://github.com/VeriDevOps/arqan.front-steamlit)")
