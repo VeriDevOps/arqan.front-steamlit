@@ -15,7 +15,7 @@ if not st.session_state.get("base_url"):
     # Load environment variables from .env file
     load_dotenv()
     # Get the base_url from the environment
-    base_url = os.getenv("arqan_back_url")
+    base_url = os.getenv("ARQAN_BACK_URL")
     st.session_state.base_url = base_url
 
     if not base_url:

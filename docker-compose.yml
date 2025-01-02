@@ -2,7 +2,7 @@ services:
   arqan.front:
     image: veridevops/arqan.streamlit-front:migration
     environment:
-      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - ARQAN_BACK_URL=${ARQAN_BACK_URL}
     ports:
       - "8501:8501"
     deploy:

@@ -90,7 +90,7 @@ base_url = st.session_state.get("base_url")
 if _but:
     if pass_init_check():
         acl = AuthenticatedClient(
-            base_url="https://arqan.softeam-rd.eu/",
+            base_url,
             token=st.session_state.token,
             verify_ssl=False,
         )
