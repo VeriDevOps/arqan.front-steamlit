@@ -19,7 +19,7 @@ if not st.session_state.get("base_url"):
     st.session_state.base_url = base_url
 
     if not base_url:
-        raise ValueError("The 'arqan_back_url' is not set in the environment or .env file.")
+        raise ValueError("The 'ARQAN_BACK_URL' is not set in the environment or .env file.")
 
 base_url = st.session_state.get("base_url")
 
