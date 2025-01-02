@@ -2,11 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches:
-      - migration
   push:
-    branches:
-      - migration
 
 env:
   IMAGE_NAME: arqan.streamlit-front
