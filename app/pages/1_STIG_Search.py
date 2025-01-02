@@ -1,4 +1,7 @@
 import time
+import os
+from dotenv import load_dotenv
+
 from collections import defaultdict
 
 from http import HTTPStatus
@@ -106,12 +109,15 @@ def pass_init_check():
     return True
 
 
+base_url = st.session_state.get("base_url")
+
+
 _but = st.button("Find")
 
 if _but:
     if pass_init_check():
         acl = AuthenticatedClient(
-            base_url="https://arqan.softeam-rd.eu/",
+            base_url,
             token=st.session_state.token,
             verify_ssl=False,
         )

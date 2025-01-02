@@ -1,3 +1,6 @@
+import os
+from dotenv import load_dotenv
+
 import streamlit as st
 from http import HTTPStatus
 
@@ -6,6 +9,19 @@ from client.api.authentication import sign_in
 from client.models.body_sign_in import BodySignIn
 from client.models.token import Token
 from client.types import Response
+
+
+if not st.session_state.get("base_url"):
+    # Load environment variables from .env file
+    load_dotenv()
+    # Get the base_url from the environment
+    base_url = os.getenv("arqan_back_url")
+    st.session_state.base_url = base_url
+
+    if not base_url:
+        raise ValueError("The 'arqan_back_url' is not set in the environment or .env file.")
+
+base_url = st.session_state.get("base_url")
 
 if not st.session_state.get("token"):
     st.session_state.token = ""
@@ -28,7 +44,7 @@ def stlogin():
             parsed=None,  # None for the parsed attribute
         )
 
-        cl = Client(base_url="https://arqan.softeam-rd.eu/", verify_ssl=False)
+        cl = Client(base_url, verify_ssl=False)
 
         with cl as client:
             body = BodySignIn(username=st.session_state.user, password=pwd)

@@ -1,8 +1,8 @@
-version: '3.8'
-
 services:
   arqan.front:
-    image: arqanfront:latest
+    image: veridevops/arqan.streamlit-front:migration
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
     ports:
       - "8501:8501"
     deploy:

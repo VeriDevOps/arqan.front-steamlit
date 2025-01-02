@@ -1,17 +1,17 @@
-import json
 import time
+
+import os
+from dotenv import load_dotenv
+
 from collections import defaultdict
 from http import HTTPStatus
 
-import numpy as np
-import pandas as pd
 import streamlit as st
 
 import stutils
 from client.types import File
 from client import AuthenticatedClient
 from client.api.common.get_task import sync as tasksync
-from client.api.common.get_task import sync_detailed as tasksync_detailed
 from client.api.extract_sec_req import extract_from_pdf
 from client.models.body_extract_from_pdf import BodyExtractFromPdf as Body
 from client.models.request_extract_from_pdf import ExtractFromPDFRequest
@@ -82,6 +82,9 @@ def pass_init_check():
         st.error("Error: token is emply. Please log in.")
         return
     return True
+
+
+base_url = st.session_state.get("base_url")
 
 
 if _but:
