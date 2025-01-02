@@ -5,8 +5,8 @@ import streamlit as st
 from http import HTTPStatus
 
 from client import Client
-from client.api.authentication import sign_in
-from client.models.body_sign_in import BodySignIn
+from client.api.authentication import sign_up
+from client.models.body_sign_up import BodySignUp
 from client.models.token import Token
 from client.types import Response
 
@@ -47,8 +47,8 @@ def stlogin():
         cl = Client(base_url, verify_ssl=False)
 
         with cl as client:
-            body = BodySignIn(username=st.session_state.user, password=pwd)
-            response: Response[Token] = sign_in.sync_detailed(client=client, body=body)
+            body = BodySignUp(username=st.session_state.user, password=pwd)
+            response: Response[Token] = sign_up.sync_detailed(client=client, body=body)
             if response.status_code != 200:
                 st.sidebar.error("Error: Login failed. Check username and password.")
                 st.sidebar.error(F"Status: {response.status_code.description}")
